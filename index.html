@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Gaming Carousel - Premium Gaming Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="stars"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-gamepad"></i> Ultimate Gaming Hub</h1>
+            <p class="subtitle">Discover the Latest & Greatest Games</p>
+        </div>
+        
+        <div class="controls-bar">
+            <button class="control-btn" id="autoPlayBtn" onclick="toggleAutoPlay()">
+                <i class="fas fa-play"></i> Auto Play
+            </button>
+            <div class="speed-control">
+                <label for="speedSlider">Speed:</label>
+                <input type="range" id="speedSlider" min="2" max="10" value="5" onchange="updateAutoPlaySpeed()">
+            </div>
+            <button class="control-btn" id="soundBtn" onclick="toggleSound()">
+                <i class="fas fa-volume-up"></i> Sound
+            </button>
+        </div>
+        
+        <div class="carousel-wrapper">
+            <div class="carousel">
+                <!-- Game 1: Elden Ring -->
+                <div class="carousel-item">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=800&h=600&fit=crop" alt="Elden Ring">
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 9.5/10
+                        </div>
+                        <div class="badge">Trending</div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Elden Ring</h3>
+                        <p class="genre"><i class="fas fa-tag"></i> Action RPG</p>
+                        <p class="description">Step into the Lands Between and experience a masterpiece of challenging gameplay and breathtaking landscapes.</p>
+                        <div class="tags">
+                            <span class="tag">2024</span>
+                            <span class="tag">Multiplayer</span>
+                            <span class="tag">Award Winner</span>
+                        </div>
+                        <button class="play-btn"><i class="fas fa-play"></i> View More</button>
+                    </div>
+                </div>
+
+                <!-- Game 2: Baldur's Gate 3 -->
+                <div class="carousel-item">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=800&h=600&fit=crop" alt="Baldur's Gate 3">
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 9.8/10
+                        </div>
+                        <div class="badge new">New</div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Baldur's Gate 3</h3>
+                        <p class="genre"><i class="fas fa-tag"></i> Fantasy RPG</p>
+                        <p class="description">An immersive RPG experience with infinite possibilities, choices that matter, and unforgettable adventures.</p>
+                        <div class="tags">
+                            <span class="tag">2024</span>
+                            <span class="tag">Single Player</span>
+                            <span class="tag">Story Rich</span>
+                        </div>
+                        <button class="play-btn"><i class="fas fa-play"></i> View More</button>
+                    </div>
+                </div>
+
+                <!-- Game 3: Cyberpunk 2077 -->
+                <div class="carousel-item">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1578979534294-df28270f6b73?w=800&h=600&fit=crop" alt="Cyberpunk 2077">
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 8.9/10
+                        </div>
+                        <div class="badge">Popular</div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Cyberpunk 2077</h3>
+                        <p class="genre"><i class="fas fa-tag"></i> Sci-Fi Action</p>
+                        <p class="description">Experience a dystopian future in Night City. A sprawling metropolis where you can be anyone and do anything.</p>
+                        <div class="tags">
+                            <span class="tag">2024</span>
+                            <span class="tag">Open World</span>
+                            <span class="tag">Next Gen</span>
+                        </div>
+                        <button class="play-btn"><i class="fas fa-play"></i> View More</button>
+                    </div>
+                </div>
+
+                <!-- Game 4: Palworld -->
+                <div class="carousel-item">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=800&h=600&fit=crop" alt="Palworld">
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 8.2/10
+                        </div>
+                        <div class="badge hot">Hot</div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Palworld</h3>
+                        <p class="genre"><i class="fas fa-tag"></i> Adventure</p>
+                        <p class="description">Catch, train, and battle adorable creatures in this revolutionary creature-collecting adventure.</p>
+                        <div class="tags">
+                            <span class="tag">2024</span>
+                            <span class="tag">Co-op</span>
+                            <span class="tag">Relaxing</span>
+                        </div>
+                        <button class="play-btn"><i class="fas fa-play"></i> View More</button>
+                    </div>
+                </div>
+
+                <!-- Game 5: Final Fantasy VII Rebirth -->
+                <div class="carousel-item">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1538481143235-5d8aebb9a138?w=800&h=600&fit=crop" alt="Final Fantasy VII">
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 9.7/10
+                        </div>
+                        <div class="badge new">New</div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Final Fantasy VII Rebirth</h3>
+                        <p class="genre"><i class="fas fa-tag"></i> JRPG</p>
+                        <p class="description">The legendary saga continues with stunning graphics, engaging combat, and an epic storyline.</p>
+                        <div class="tags">
+                            <span class="tag">2024</span>
+                            <span class="tag">PlayStation</span>
+                            <span class="tag">Epic Story</span>
+                        </div>
+                        <button class="play-btn"><i class="fas fa-play"></i> View More</button>
+                    </div>
+                </div>
+
+                <!-- Game 6: Helldivers 2 -->
+                <div class="carousel-item">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69b13d835?w=800&h=600&fit=crop" alt="Helldivers 2">
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 8.8/10
+                        </div>
+                        <div class="badge hot">Hot</div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Helldivers 2</h3>
+                        <p class="genre"><i class="fas fa-tag"></i> Co-op Shooter</p>
+                        <p class="description">Join your friends in this thrilling squad-based shooter. Fight alien threats and complete dangerous missions together.</p>
+                        <div class="tags">
+                            <span class="tag">2024</span>
+                            <span class="tag">Multiplayer</span>
+                            <span class="tag">Action Packed</span>
+                        </div>
+                        <button class="play-btn"><i class="fas fa-play"></i> View More</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation Buttons -->
+            <button class="carousel-btn prev" onclick="moveCarousel(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn next" onclick="moveCarousel(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <!-- Dots Navigation -->
+        <div class="dots-container">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+
+        <!-- Game Counter -->
+        <div class="game-counter">
+            <span id="currentGame">1</span> / <span id="totalGames">6</span>
+        </div>
+
+        <!-- Info Section -->
+        <div class="info-section">
+            <div class="info-card">
+                <i class="fas fa-heart"></i>
+                <h4>Wishlist</h4>
+                <p>Add games to your personal wishlist</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-users"></i>
+                <h4>Community</h4>
+                <p>Join millions of gamers worldwide</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-trophy"></i>
+                <h4>Achievements</h4>
+                <p>Unlock achievements and badges</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
